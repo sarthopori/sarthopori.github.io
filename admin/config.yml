@@ -1,22 +1,6 @@
 backend:
   name: github
-  repo: sarthopori/sarthopori.github.io # Your repo name
-  branch: main # The branch to update
+  repo: sarthopori/sarthopori.github.io
+  branch: main
 
-media_folder: "images" # Where images are stored
-public_folder: "/images"
-
-collections:
-  - name: "content"
-    label: "Website Content"
-    files:
-      - label: "Homepage Text"
-        name: "home"
-        file: "_data/content.json"
-        fields:
-          - { label: "Main Title", name: "home_title", widget: "string" }
-          - { label: "Recent Projects Title", name: "recent_projects_title", widget: "string" }
-          - { label: "Video Tutorial Title", name: "video_tutorial_title", widget: "string" }
-          - { label: "Testimonial Section Title", name: "testimonial_title", widget: "string" }
-          - { label: "First Testimonial", name: "testimonial_1", widget: "text" }
-          - { label: "Second Testimonial", name: "testimonial_2", widget: "text" }
+media_folder: "images"
