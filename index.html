@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- Adding Google Fonts for Impact and Freestyle Script -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Freestyle+Script&family=Impact&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
@@ -25,56 +24,65 @@
     </header>
 
     <main class="main-content">
-        <!-- 2. Banner -->
         <div class="promo-banner">Promotional Banner</div>
 
-        <!-- 3. Title Text -->
-        <div class="title-text">Experience the Future of Design</div>
+        <!-- This div is now a placeholder with an ID. The text will be loaded into it. -->
+        <div class="title-text" id="home_title"></div>
 
-        <!-- 4. Three Picture Cards -->
         <section class="card-grid">
             <div class="info-card">Picture Card 1</div>
             <div class="info-card">Picture Card 2</div>
             <div class="info-card">Picture Card 3</div>
         </section>
 
-        <!-- 5. Recent Projects Title -->
-        <div class="title-text">Recent Project that we have Done</div>
+        <!-- This is also a placeholder now -->
+        <div class="title-text" id="recent_projects_title"></div>
 
-        <!-- 6. Three Clickable Project Cards -->
         <section class="card-grid">
             <a href="#" class="project-card">Recent Design 1</a>
             <a href="#" class="project-card">Recent Design 2</a>
             <a href="#" class="project-card">Recent Design 3</a>
         </section>
 
-        <!-- 7. Video Tutorial Title -->
-        <div class="title-text">Video Tutorial/Class</div>
+        <!-- This is a placeholder -->
+        <div class="title-text" id="video_tutorial_title"></div>
 
-        <!-- 8. Three Video Cards -->
         <section class="card-grid">
             <a href="#" class="video-card">YouTube Thumbnail 1</a>
             <a href="#" class="video-card">YouTube Thumbnail 2</a>
             <a href="#" class="video-card">YouTube Thumbnail 3</a>
         </section>
 
-        <!-- 9. Testimonial Title -->
-        <div class="title-text testimonial-title">Testimonial</div>
+        <!-- This is a placeholder -->
+        <div class="title-text testimonial-title" id="testimonial_title"></div>
 
-        <!-- 10. Two Testimonial Cards -->
         <section class="testimonial-section">
-            <div class="testimonial-card">Testimonial Text 1</div>
-            <div class="testimonial-card">Testimonial Text 2</div>
+            <!-- These are placeholders -->
+            <div class="testimonial-card" id="testimonial_1"></div>
+            <div class="testimonial-card" id="testimonial_2"></div>
         </section>
     </main>
 
-    <!-- 11. Footer -->
     <footer class="footer">
         <h3>Contact us</h3>
         <p>Social Media Icons Here</p>
         <p><a href="mailto:support@identitywind.com">support@identitywind.com</a></p>
         <p>Copyright © 2025 Identity Wind</p>
     </footer>
+
+    <!-- This new script does the magic. It fetches your content and displays it. -->
+    <script>
+      fetch('/_data/content.json')
+        .then(response => response.json())
+        .then(data => {
+          for (const key in data) {
+            const element = document.getElementById(key);
+            if (element) {
+              element.innerHTML = data[key];
+            }
+          }
+        });
+    </script>
 
 </body>
 </html>
