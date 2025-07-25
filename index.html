@@ -10,69 +10,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Freestyle+Script&family=Impact&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header class="header">
         <div class="logo-section">Logo Section</div>
         <nav class="menu-bar">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="service.html">Service</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="blog.html">Blog</a>
+            <a href="index.html" class="active">Home</a><a href="about.html">About</a><a href="portfolio.html">Portfolio</a><a href="service.html">Service</a><a href="contact.html">Contact Us</a><a href="blog.html">Blog</a>
         </nav>
     </header>
-
     <main class="main-content">
         <div class="promo-banner">Promotional Banner</div>
-
-        <!-- This div is now a placeholder with an ID. The text will be loaded into it. -->
         <div class="title-text" id="home_title"></div>
-
         <section class="card-grid">
-            <div class="info-card">Picture Card 1</div>
-            <div class="info-card">Picture Card 2</div>
-            <div class="info-card">Picture Card 3</div>
+            <div class="info-card">Picture Card 1</div><div class="info-card">Picture Card 2</div><div class="info-card">Picture Card 3</div>
         </section>
-
-        <!-- This is also a placeholder now -->
         <div class="title-text" id="recent_projects_title"></div>
-
         <section class="card-grid">
-            <a href="#" class="project-card">Recent Design 1</a>
-            <a href="#" class="project-card">Recent Design 2</a>
-            <a href="#" class="project-card">Recent Design 3</a>
+            <a href="#" class="project-card">Recent Design 1</a><a href="#" class="project-card">Recent Design 2</a><a href="#" class="project-card">Recent Design 3</a>
         </section>
-
-        <!-- This is a placeholder -->
         <div class="title-text" id="video_tutorial_title"></div>
-
         <section class="card-grid">
-            <a href="#" class="video-card">YouTube Thumbnail 1</a>
-            <a href="#" class="video-card">YouTube Thumbnail 2</a>
-            <a href="#" class="video-card">YouTube Thumbnail 3</a>
+            <a href="#" class="video-card">YouTube Thumbnail 1</a><a href="#" class="video-card">YouTube Thumbnail 2</a><a href="#" class="video-card">YouTube Thumbnail 3</a>
         </section>
-
-        <!-- This is a placeholder -->
         <div class="title-text testimonial-title" id="testimonial_title"></div>
-
         <section class="testimonial-section">
-            <!-- These are placeholders -->
-            <div class="testimonial-card" id="testimonial_1"></div>
-            <div class="testimonial-card" id="testimonial_2"></div>
+            <div class="testimonial-card" id="testimonial_1"></div><div class="testimonial-card" id="testimonial_2"></div>
         </section>
     </main>
-
     <footer class="footer">
-        <h3>Contact us</h3>
-        <p>Social Media Icons Here</p>
-        <p><a href="mailto:support@identitywind.com">support@identitywind.com</a></p>
-        <p>Copyright © 2025 Identity Wind</p>
+        <h3>Contact us</h3><p>Social Media Icons Here</p><p><a href="mailto:support@identitywind.com">support@identitywind.com</a></p><p>Copyright © 2025 Identity Wind</p>
     </footer>
-
-    <!-- This new script does the magic. It fetches your content and displays it. -->
+    <!-- This script fetches the content and populates the page -->
     <script>
-      fetch('/_data/content.json')
+      fetch('/sarthopori.github.io/_data/content.json')
         .then(response => response.json())
         .then(data => {
           for (const key in data) {
@@ -83,6 +51,5 @@
           }
         });
     </script>
-
 </body>
 </html>
