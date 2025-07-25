@@ -31,3 +31,52 @@ body { font-family: sans-serif; margin: 0; }
 .blog-post { display: flex; width: 900px; height: 400px; margin: 20px auto; }
 .blog-image-placeholder { width: 400px; height: 400px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; }
 .blog-text { width: 500px; height: 400px; padding-left: 20px; text-align: left; }
+
+/* --- Styles for New Homepage Sections --- */
+
+/* Grid for holding the 3 cards */
+.card-grid {
+    display: flex;
+    justify-content: space-between;
+    width: 1024px;
+    margin: auto;
+    padding: 0 20px; /* Adjust padding to fit cards */
+    box-sizing: border-box; /* Important for layout */
+}
+
+/* Styles for the 3 types of cards */
+.info-card, .project-card, .video-card {
+    width: 298px;
+    height: 298px;
+    background-color: #e0e0e0;
+    border-radius: 15px; /* Round Corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Special title for Testimonials */
+.testimonial-title {
+    font-family: 'Freestyle Script', cursive; /* Use the special font */
+    font-size: 60pt; /* It's a script font, may need to be larger */
+    font-weight: normal;
+}
+
+/* Section for holding the two large testimonial cards */
+.testimonial-section {
+    display: flex;
+    flex-direction: column; /* Stack them vertically */
+    align-items: center;
+    gap: 20px; /* Space between the two cards */
+}
+
+.testimonial-card {
+    width: 960px;
+    height: 200px;
+    border: 2px solid #017090; /* Outline of the card */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
