@@ -1,3 +1,5 @@
+site_url: https://identitywind.netlify.app
+
 backend:
   name: git-gateway
   branch: main # or master if your branch is called master
