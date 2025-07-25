@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* Basic Styles */
+        body { font-family: sans-serif; margin: 0; }
+        .header { width: 1024px; margin: auto; }
+        .menu-bar { background-color: #017090; width: 1024px; height: 34px; color: white; display: flex; justify-content: space-around; align-items: center; }
+        .menu-bar a { color: white; text-decoration: none; font-family: Open Sans, sans-serif; font-weight: 600; }
+        .menu-bar a.active { color: #c0d72f; }
+        .footer { background-color: #017090; width: 1024px; height: 200px; color: white; text-align: center; padding: 20px 0; margin: 20px auto 0; font-family: Open Sans, sans-serif; font-weight: 600; }
+        .footer a { color: white; }
+        .main-content { width: 1024px; margin: auto; text-align: center; }
+        .title-text { height: 84px; font-size: 48pt; font-family: Impact, sans-serif; color: #017090; letter-spacing: 2px; display: flex; align-items: center; justify-content: center; }
+        /* Portfolio Grid Styles */
+        .portfolio-grid { display: grid; grid-template-columns: 400px 400px; grid-gap: 20px; justify-content: center; }
+        .portfolio-card { width: 400px; height: 400px; background-color: #e0e0e0; text-decoration: none; color: white; position: relative; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+        .portfolio-card-footer { position: absolute; bottom: 0; left: 0; width: 100%; background-color: rgba(1, 112, 144, 0.8); padding: 10px 0; text-align: center; font-family: Open Sans, sans-serif; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div style="width: 1024px; height: 72px; background-color: #f0f0f0; display: flex; align-items: center; justify-content: center;">Logo Section</div>
+        <nav class="menu-bar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html" class="active">Portfolio</a>
+            <a href="#">Service</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Blog</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="title-text">Portfolio</div>
+        <div class="portfolio-grid">
+            <!-- You will have 8 of these cards -->
+            <a href="#" class="portfolio-card">
+                <span>Portfolio Image 1</span>
+                <div class="portfolio-card-footer">Logo</div>
+            </a>
+            <a href="#" class="portfolio-card">
+                <span>Portfolio Image 2</span>
+                <div class="portfolio-card-footer">Poster</div>
+            </a>
+            <a href="#" class="portfolio-card">
+                <span>Portfolio Image 3</span>
+                <div class="portfolio-card-footer">Logo</div>
+            </a>
+            <a href="#" class="portfolio-card">
+                <span>Portfolio Image 4</span>
+                <div class="portfolio-card-footer">Poster</div>
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <h3>Contact us</h3>
+        <p>Social Media Icons Here</p>
+        <p><a href="mailto:support@identitywind.com">support@identitywind.com</a></p>
+        <p>Copyright © 2025 Identity Wind</p>
+    </footer>
+
+</body>
+</html>
