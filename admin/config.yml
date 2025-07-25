@@ -1,33 +1,23 @@
-site_url: https://capable-bombolone-1ad1f4.netlify.app
-
 backend:
-  name: git-gateway
-  branch: main # or master if your branch is called master
+  name: github
+  repo: sarthopori/sarthopori.github.io
+  branch: main
 
-media_folder: "images/uploads" # Where images will be saved
+media_folder: "images"
 
 collections:
   - name: "pages"
-    label: "Main Pages"
+    label: "Pages"
     files:
-      - file: "index.html"
-        label: "Home Page"
+      - label: "Home"
         name: "home"
+        file: "index.html"
         fields:
-          - {label: "Page Title", name: "title", widget: "string"}
-          - {label: "Body Content", name: "body", widget: "markdown"}
-      - file: "about.html"
-        label: "About Page"
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: "About"
         name: "about"
+        file: "about.html"
         fields:
-          - {label: "Page Title", name: "title", widget: "string"}
-          - {label: "Body Content", name: "body", widget: "markdown"}
-  - name: "blog"
-    label: "Blog Posts"
-    folder: "_posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
