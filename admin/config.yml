@@ -1,0 +1,31 @@
+backend:
+  name: git-gateway
+  branch: main # or master if your branch is called master
+
+media_folder: "images/uploads" # Where images will be saved
+
+collections:
+  - name: "pages"
+    label: "Main Pages"
+    files:
+      - file: "index.html"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+      - file: "about.html"
+        label: "About Page"
+        name: "about"
+        fields:
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
