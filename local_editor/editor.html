@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom CMS Editor</title>
+  <style>
+    body { font-family: Arial; padding: 20px; max-width: 600px; margin: auto; }
+    label { font-weight: bold; margin-top: 10px; display: block; }
+    input, textarea { width: 100%; padding: 8px; margin-bottom: 15px; }
+    button { padding: 10px 15px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h1>Website Content Editor</h1>
+  <form id="cmsForm">
+    <label for="home_title">Home Title</label>
+    <input type="text" id="home_title" name="home_title">
+
+    <label for="recent_projects_title">Recent Projects Title</label>
+    <input type="text" id="recent_projects_title" name="recent_projects_title">
+
+    <label for="video_tutorial_title">Video Tutorial Title</label>
+    <input type="text" id="video_tutorial_title" name="video_tutorial_title">
+
+    <label for="testimonial_title">Testimonial Title</label>
+    <input type="text" id="testimonial_title" name="testimonial_title">
+
+    <button type="submit">Save</button>
+  </form>
+
+  <script>
+    // Load data from JSON file
+    fetch('../_data/content.json')
+      .then(res => res.json())
+      .then(data => {
+        for (let key in data) {
+          if (document.getElementById(key)) {
+            document.getElementById(key).value = data[key];
+          }
+        }
+      });
+
+    // On submit, send data to local server
+    document.getElementById('cmsForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const updatedData = {
+        home_title: document.getElementById('home_title').value,
+        recent_projects_title: document.getElementById('recent_projects_title').value,
+        video_tutorial_title: document.getElementById('video_tutorial_title').value,
+        testimonial_title: document.getElementById('testimonial_title').value,
+      };
+
+      fetch('http://localhost:3000/save', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updatedData),
+      }).then(res => {
+        if (res.ok) {
+          alert('Content saved!');
+        } else {
+          alert('Failed to save content');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
